@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Personal Website </title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="style/stylesheet.css"></style>
+  <script src="Portfolio/data.js"></script>
+  <script src="source.js"></script>
+
+  <style>
+    :root {
+        --palette-bg: #e8e8e8;
+        --palette-bg-brighten: #f8f8f8;
+        --palette-main: black;
+        --palette-secondary: #236d8d;
+    }
+  </style>
+</head>
+<body onload="on_load();">
+  <nav id="navbar">
+  </nav>
+  <div class="main">
+    <!-- CV -->
+    <div class="cv">
+      <h3 class="vertical-header"> CV </h3>
+        <h1> Nick Felten </h1>
+        <p style="margin: 15px;">
+          I am an aspiring aerospace engineer with specialization in space flight dynamics 
+          (GNC, attitude control, astrodynamics). Through my personal projects in computer 
+          graphics and game development, I already have acquired lots of experience in software 
+          development and practical problem solving in addition to my studies.                   
+        </p>
+        <h2> Education </h2>
+        <table>
+          <tr>
+            <td>Ongoing</td>
+            <td> <span class="keyword">MSc Aerospace Engineering, TU-Delft</span>, NL
+              <ul>
+              <li> Space Track, <span class="keyword">Spaceflight Dynamics</span> profile </li>
+              <li> Expect to graduate Summer-Fall 2025 </li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Sept. 2020 - July 2023</td>
+            <td>  <span class="keyword">BSc Aerospace Engineering, TU-Delft </span>, NL
+              <ul>
+              <li> Completed in nominal 3 years </li>
+              <li> Worked in a <span class="keyword">full-time systems-engineering</span> team-project as graduation project </li>
+              <li> Minor in modern physics </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+        <h2> Computer skills </h2>
+        <ul>
+          <li> Proficient with both <span class="keyword">Python</span> (with. numpy/scipy, etc ), and <span class="keyword">Matlab</span> for scientific computing in academic context. </li>
+          <li> Compfortable with Git Version Control </li>
+          <li> Compfortable with <span class="keyword">C</span> <span class="keyword">C++</span> and <span class="keyword">C#</span> 
+            through personal projects </li>
+          <li> Experience of operating both Windows and Linux on a day-to-day basis </li>
+          <!-- <li> Basic HTML/CSS/JS </li> -->
+          <li> Learned over a diverse set of personal programming projects, from 
+            <a href="#astro-prototype"> low-level graphics & simulation </a> to 
+            <a href="#executer2"> social media bot</a> </li>
+        </ul>
+        <h2> Soft skills </h2>
+        <ul>
+          <li> Quick and motivated to learn new things/tools and to continue improving </li>
+          <li> Eager to help/share my findings </li>
+        </ul>
+        <div style="display: flex">
+          <div>
+            <h2> Languages </h2>
+            <ul>
+              <li> <span class="keyword">English</span> (proficient) </li>
+              <li> <span class="keyword">German & French</span> (proficient in reading & writing) </li>
+              <li> Luxemburgish as a mother tongue </li>
+            </ul>
+          </div>
+          <div>
+            <h2> Interests </h2>
+            <ul>
+              <li> 3D modelling & computer graphics </li>
+              <li> Game design & development </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+    <div style="height: 20px;"></div>
+
+
+    <div class="cv present-card">
+      <h3 class="vertical-header"> Project </h3>
+      <h1> <a name="astro-prototype"> Astrodynamics Game Prototype </a> </h1>
+      <table><tr>
+        <td><a href=""> Link to project </a></td>
+        <td><a style="float: right;" href=""> Link to sourcecode </a></td>
+      </tr></table>
+      Focuses on: 
+        <span class="keyword tooltip"> Astrodynamics </span> 
+        <span class="keyword tooltip"> Software Architecture </span> 
+        <span class="keyword tooltip"> Low-level Rendering & UI </span>
+      
+      <a href="https://i.postimg.cc/W4FvqcPY/2024-10-05-16-18-32.png">
+      <img class="image-frame" src="https://i.postimg.cc/W4FvqcPY/2024-10-05-16-18-32.png" width="100%" alt="Screenshot">
+      </a>
+      <div> 
+        A work-in-progress larger game project I work on in bursts. It is a resource-managing game
+        in the context of orbital mechanics and deals with managing the logistics between the moons of Saturn.
+        It is written from scratch with raylib as a backend.
+        <h2> Technical Features </h2>
+        <ul>
+          <li> Written in C++ (with modern features are used sparingly) and raylib </li>
+          <li> Reliable 2-body dynamics and labert targeting written from scratch </li>
+          <li> Custom 3D rendering pipeline, optimized for this specific project </li>
+          <li> Custom Datastructures </li>
+        </ul>
+      </div>
+    </div>
+    <div style="height: 20px;"></div>
+
+
+    <div class="cv present-card">
+      <h3 class="vertical-header"> Project </h3>
+      <h1> <a hname="flight-simulator"> Flight Simulator </a> </h1>
+      <table><tr>
+        <td><a href=""> Link to project </a></td>
+        <!--<td><a style="float: right;" href=""> Link to sourcecode </a></td>-->
+      </tr></table>
+      Focuses on: <span class="keyword"> Kinematics </span> <span class="keyword"> Rendering </span>
+      <a href="https://i.postimg.cc/7ZFJCMcJ/Screenshot-from-2024-11-03-21-57-50.png">
+      <img class="image-frame" src="https://i.postimg.cc/7ZFJCMcJ/Screenshot-from-2024-11-03-21-57-50.png" width="100%" alt="Flight Simulator Screenshot"/></a>
+      <div> 
+        A project I started on when I noticed the lack of (combat) light simulators that are physically realistic, but simple to pick up.
+        At this time, I was also experimenting with highly stylized rendering techniques.
+        It's far from a commercial state, but at this point pretty functional.
+
+        <h2> Technical Features </h2>
+        <ul>
+          <li> Written in GODOT Game Engine (with python-like script) </li>
+          <li> Custom kinematics for flight mechanics. </li>
+          <li> Volumetric cloud rendering, and custom stylized cartoon shader. </li>
+        </ul>
+      </div>
+    </div>
+    <div style="height: 20px;"></div>
+    
+    <!--
+  <div class="cv present-card">
+    <h3 class="vertical-header"> Project </h3>
+    <h1> <a hname="discord-bot"> Discord Bot </a> </h1>
+    <table><tr>
+      
+      <td><a style="float: right;" href=""> Link to sourcecode </a></td>
+    </tr></table>
+    <img src="https://media.istockphoto.com/id/816752606/photo/tv-test-card-or-test-pattern-generic.jpg?s=612x612&w=0&k=20&c=63Jcx_5bFnvBw9elRDLrLKjtDYXr70pKtUK0jXJ2_uY=" width="100%">
+    <div> 
+      Personal discord bot, very much ...
+      <h2> Technical Features </h2>
+      a
+    </div>
+  </div>
+  -->
+  </div>
+  
+  <footer>
+    
+  </footer>
+</body>
+</html>
