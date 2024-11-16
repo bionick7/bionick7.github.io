@@ -3,22 +3,29 @@ import os, re
 HEADER = """
 <head>
   <title> Personal Website </title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Nick Felten">
+  <meta name="keywords" content="">
+  <!--<link rel="icon" type="image/x-icon" href="/images/favicon.ico">-->
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <link rel="stylesheet" href="/style/stylesheet.css"></style>
+
   <script src="/Portfolio/data.js"></script>
   <script src="/source.js"></script>
 </head>
 """
 
 def change_header(filepath: str):
-    print("modifying")
+    print(f"modifying {filepath}")
     with open(filepath, "r") as f:
         str = f.read()
     
     str = re.sub("<head>.*</head>", HEADER, str)
-    str = str.replace("<body", '<body onload="on_load();"')
+    #str = str.replace("<body", '<body onload="on_load();"')
 
     with open(filepath, "w") as f:
         f.write(str)
@@ -29,7 +36,6 @@ def plug_header():
         for filename in files:
             if filename.endswith(".html"):
                 change_header(os.path.join(root, filename))
-                return
 
 
 def generate_portfolio():

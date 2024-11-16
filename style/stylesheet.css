@@ -2,6 +2,8 @@
     --palette-bg: #1D2025;
     --palette-bg-brighten: #2D3035;
     --palette-main: #FFFFA0;
+    --palette-main-alt: #808050;
+    --palette-main-dark: #505032;
     --palette-blue: #2395A9;
     --palette-green: #4FC76C;
     --palette-red: #FF5155;
@@ -69,18 +71,18 @@ h1, h2, h3, h4 {
     flex-direction: column;
     padding: 15px;
     background-color: var(--palette-bg-brighten);
-    border: solid 1px var(--palette-main);
+    border: solid 1px var(--palette-main-alt);
 }
 
 #vertical-nav a {
-    color: var(--palette-main);
+    color: var(--palette-main-alt);
     padding: 7px 5px;
     text-align: left;
     text-decoration: none;
 }
 
 #vertical-nav a:hover {
-    color: var(--palette-secondary);
+    color: var(--palette-main);
 }
 
 .main {
@@ -98,7 +100,7 @@ h1, h2, h3, h4 {
     padding-right: 10px;
 }
 
-.sec-4040 h1 {
+.sec-4040 h1, .article-4040 h1 {
     font-size: 64px;
     text-align: center;
 }
@@ -111,6 +113,12 @@ h1, h2, h3, h4 {
     padding-left: 15px;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.text-4040 {
+    column-count: 2;
+    column-gap: 5em;
+    column-rule: solid 1px var(--palette-main-alt);
 }
 
 /* CV */

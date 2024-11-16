@@ -5,7 +5,7 @@ const navbar_data = [
     { "link": "/index.html", "display": "Home" },
     { "link": "/4040.html", "display": "4040 Universe" },
     { "link": "/cv.html", "display": "CV and Portfolio" },
-    { "link": "/portfolio.html", "display": "Artistic stuff" },
+    { "link": "/portfolio.html", "display": "Gallery" },
 ]
 
 function on_load() {
