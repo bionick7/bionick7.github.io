@@ -2,7 +2,7 @@ import os, re
 
 HEADER = """
 <head>
-  <title> Personal Website </title>
+  <title> Nick Felten's personal site </title>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -85,6 +85,20 @@ h1, h2, h3, h4 {
     color: var(--palette-main);
 }
 
+.warning-banner {
+    position: fixed;
+    top: 50px;
+    width: 70%;
+    background-color: rgb(33, 29, 29);
+    color: orange;
+    font-size: 2em;
+    border: solid 2px orange;
+    text-align: center;
+    z-index: 10;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
 .main {
     margin-top: 50px;
 }
