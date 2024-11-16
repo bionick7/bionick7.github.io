@@ -24,7 +24,8 @@ def change_header(filepath: str):
     with open(filepath, "r") as f:
         str = f.read()
     
-    str = re.sub("<head>.*</head>", HEADER, str)
+    #print(re.findall(r"<head>(.|\n)*<\/head>", str))
+    str = re.sub(r"<head>(.|\n)*<\/head>", HEADER, str)
     #str = str.replace("<body", '<body onload="on_load();"')
 
     with open(filepath, "w") as f:
