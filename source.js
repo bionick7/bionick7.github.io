@@ -1,5 +1,3 @@
-function on_load_portfolio() {
-}
 
 const navbar_data = [
     { "link": "/index.html", "display": "Home" },
@@ -8,10 +6,13 @@ const navbar_data = [
     { "link": "/portfolio.html", "display": "Gallery" },
 ]
 
+let voc_list = [];
+
 function on_load() {
     let navbar = document.getElementById("navbar");
     let vertical_nav = document.getElementById("vertical-nav");
     let picture_grid = document.getElementById("picture-grid");
+    let vocabulary_tag = document.getElementById("vocabulary");
 
     if (navbar !== null) {
         for (data of navbar_data) {
@@ -36,7 +37,8 @@ function on_load() {
         + '<a href="/4040/damocles.html"> &nbsp Damocles Sword </a>'
 
         + '<a href="/4040.html#lore"> Lore </a>'
-        + '<a href="/4040/UZTAFOX.html"> &nbsp UZTAFOX </a>'
+        + '<a href="/4040/UXOKFOX.html"> UXOKFOX </a>'
+        + '<a href="/4040/UXOKFOX-Vocabulary.html"> &nbsp Vocabulary </a>'
         ;
     }
 
@@ -51,8 +53,35 @@ function on_load() {
                                     + "</a>";
         }
     }
+
+    if (vocabulary_tag !== null) {
+        populate_vocabulary_recursive(vocabulary_tag, vocabulary_data)
+    }
 }
 
+function matches_input(test, query) {
+    if (query == "") {
+        return true;
+    }
+    return test[0].toLowerCase() == query[0].toLowerCase();
+}
+
+function on_search(search_query) {
+    for (v of voc_list) {
+        elem = document.getElementById(v);
+        if (elem === null) {
+            continue;
+        }
+        //elem.style.visibilityState = "hidden";
+        if (matches_input(v, search_query)) {
+            elem.style.visibility = "visible";
+            elem.style.height = "1.5em";
+        } else {
+            elem.style.visibility = "collapse";
+            elem.style.height = "0em";
+        }
+    }
+}
 
 function show_img(pic_idx) {
     let picture_detail = document.getElementById("picture-detail");
@@ -70,4 +99,29 @@ function show_img(pic_idx) {
 function unshow_img() {
     let picture_detail = document.getElementById("picture-detail");
     picture_detail.style.visibility = "hidden";
+}
+
+function vocabulary_row(key, value, level) {
+    span_style = "color:var(--palette-secondary); display: inline-block; width: 10em; height: 1.5em;";
+    voc_list.push(key);
+    return `<div style="padding-left:${level * 15}px;" id="${key}">
+            <span style="${span_style}">${key}</span> ${value}
+        </div>`;
+}
+
+function populate_vocabulary_recursive(parent_tag, data, level=0) {
+    for (key in data) {
+        if (key.startsWith("_")) {
+            continue;
+        }
+        if (typeof(data[key]) === "object") {
+            var child_tag = document.createElement("div");
+            parent_tag.innerHTML += vocabulary_row(key, "", level);
+            parent_tag.appendChild(child_tag);
+            populate_vocabulary_recursive(child_tag, data[key], level + 1);
+        }
+        else if (typeof(data[key]) === "string") {
+            parent_tag.innerHTML += vocabulary_row(key, data[key], level);
+        }
+    }
 }

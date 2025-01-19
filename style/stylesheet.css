@@ -135,6 +135,17 @@ h1, h2, h3, h4 {
     column-rule: solid 1px var(--palette-main-alt);
 }
 
+.fake-document-4040 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 15px;
+}
+
 /* CV */
 
 .cv {

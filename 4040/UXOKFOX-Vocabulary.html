@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
   <title> Nick Felten's personal site </title>
 
@@ -17,28 +17,18 @@
   <script src="/Portfolio/data.js"></script>
   <script src="/source.js"></script>
 </head>
-<body onload="on_load()">
+<body onload="on_load();">
   <nav id="navbar">
   </nav>
-  <div class="main">
-    <div>
-      <div id="picture-grid">
+  <div id="vertical-nav">
+  </div>
+  <div class="article-4040">
+    <h1> Vocabulary </h1>
+    <label> Search ... </label>
+    <!--<input type="text" id="search" name="search" onkeydown="if (event.key == 'Enter') { on_search(this.value); }">-->
+    <input type="text" id="search" name="search" onkeyup=" on_search(this.value); ">
+    <div id="vocabulary">
 
-      </div>
-    </div>
-
-    </div>
-    <div id="picture-detail">
-      <div class="pic-buttons">
-        <button onclick="unshow_img()" title="Close Preview"> <i class="fa fa-close"></i> </button>
-        <a href="" style="top:65px;" download title="Download"> <i class="fa fa-download"></i> </a>
-      </div>
-      <a href="" target="_blank"> <img src="Will hopefully be set"> </a>
-      <div id="picture-detail-descr">  </div>
     </div>
   </div>
-  <footer>
-
-  </footer>
 </body>
-</html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <title> Nick Felten's personal site </title>
 
@@ -14,17 +13,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/style/stylesheet.css"></style>
 
+  <script src="/4040/vocabulary_data.js"></script>
   <script src="/Portfolio/data.js"></script>
   <script src="/source.js"></script>
 </head>
-
 <body onload="on_load();">
   <style>
     :root {
-        --palette-bg: #e8e8e8;
-        --palette-bg-brighten: #f8f8f8;
-        --palette-main: black;
-        --palette-secondary: #236d8d;
+      --palette-bg: #e8e8e8;
+      --palette-bg-brighten: #f8f8f8;
+      --palette-main: black;
+      --palette-secondary: #236d8d;
     }
   </style>
 
@@ -131,7 +130,6 @@
     </div>
     <div style="height: 20px;"></div>
 
-
     <div class="cv present-card">
       <h3 class="vertical-header"> Project </h3>
       <h1> <a hname="flight-simulator"> Flight Simulator </a> </h1>
@@ -173,6 +171,26 @@
     </div>
   </div>
   -->
+
+  <div class="cv present-card">
+    <h3 class="vertical-header"> Project </h3>
+    <h1> <a hname="space-trace"> SpaceTrace </a> </h1>
+    <table><tr>
+      <td><a href="https://pypi.org/project/spacetrace/"> Link to project </a></td>
+      <td><a style="float: right;" href="https://github.com/bionick7/space-trace"> Link to sourcecode </a></td>
+    </tr></table>
+    Focuses on: <span class="keyword"> Data Visualization </span> <span class="keyword"> UI </span> <span class="keyword"> Maintainability </span>
+    <img class="image-frame" src="/pics/space-trace.png" width="100%" alt="Space Trace Screenshot"/>
+    <div> 
+      <h2> Technical Features </h2>
+      <ul>
+        <li> Written directly in python with raylib as its back-end. </li>
+        <li> Makes use of hardware acceleration through some low-level trickery. </li>
+      </ul>
+    </div>
+  </div>
+  <div style="height: 20px;"></div>
+
   </div>
   
   <footer>
